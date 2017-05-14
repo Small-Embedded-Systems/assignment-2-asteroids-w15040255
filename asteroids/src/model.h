@@ -12,14 +12,18 @@ struct ship {
 };
 
 /* initial struts for building linked lists */
-struct rock {
+typedef struct rock_t {
     coordinate_t p;
-    struct rock *next;
-};
+		vector_t v;
+    struct rock_t *next;
+}rock_t;
 
-struct missile {
+typedef struct missile_t {
     coordinate_t p;
-    struct missile *next;
-};
+		vector_t v;
+    struct missile_t *next;
+}missile_t;
 
 void physics(void);
+
+void newMissile(missile_t *head);
